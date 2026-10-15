@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "tgs": {
     "id": "T&S 2801",
     "designer": "T&S Traffic Management",
@@ -8,7 +8,8 @@
     "design_date": "2025-10-07",
     "scope": "Drainage upgrade",
     "duration": "7 months",
-    "source_file": "samples/young-marina-st.png"
+    "source_file": "samples/young-marina-st.png",
+    "to_scale": false
   },
   "location": {
     "street": "Marina St",
@@ -18,7 +19,8 @@
     "cross_streets": ["Lynch St", "Main St"]
   },
   "speed_kmh": 50,
-  "d_m": null,
+  "d_m": 15,
+  "d_m_confirmed": false,
   "anchors": [
     {
       "id": "int_marina_lynch",
@@ -34,10 +36,10 @@
       "anchor": "int_marina_lynch",
       "kerb": "left",
       "signs": [
-        { "type": "ROADWORK_AHEAD",           "at_d": 4 },
-        { "type": "WORKER_SYMBOL",            "at_d": 3 },
-        { "type": "PREPARE_TO_STOP",          "at_d": 2 },
-        { "type": "TRAFFIC_CONTROLLER_AHEAD", "at_d": 1 }
+        { "type": "TRAFFIC_CONTROLLER_AHEAD", "gap_d": 1 },
+        { "type": "PREPARE_TO_STOP",          "gap_d": 1 },
+        { "type": "WORKER_SYMBOL",            "gap_d": 1 },
+        { "type": "ROADWORK_AHEAD",           "gap_d": 1 }
       ]
     },
     {
@@ -47,10 +49,10 @@
       "anchor": "int_marina_lynch",
       "kerb": "left",
       "signs": [
-        { "type": "ROADWORK_AHEAD",           "at_d": 4 },
-        { "type": "WORKER_SYMBOL",            "at_d": 3 },
-        { "type": "PREPARE_TO_STOP",          "at_d": 2 },
-        { "type": "TRAFFIC_CONTROLLER_AHEAD", "at_d": 1 }
+        { "type": "TRAFFIC_CONTROLLER_AHEAD", "gap_d": 1 },
+        { "type": "PREPARE_TO_STOP",          "gap_d": 1 },
+        { "type": "WORKER_SYMBOL",            "gap_d": 1 },
+        { "type": "ROADWORK_AHEAD",           "gap_d": 1 }
       ]
     },
     {
@@ -60,10 +62,10 @@
       "anchor": "int_marina_lynch",
       "kerb": "left",
       "signs": [
-        { "type": "ROADWORK_AHEAD",           "at_d": 4 },
-        { "type": "WORKER_SYMBOL",            "at_d": 3 },
-        { "type": "PREPARE_TO_STOP",          "at_d": 2 },
-        { "type": "TRAFFIC_CONTROLLER_AHEAD", "at_d": 1 }
+        { "type": "TRAFFIC_CONTROLLER_AHEAD", "gap_d": 1 },
+        { "type": "PREPARE_TO_STOP",          "gap_d": 1 },
+        { "type": "WORKER_SYMBOL",            "gap_d": 1 },
+        { "type": "ROADWORK_AHEAD",           "gap_d": 1 }
       ]
     }
   ],
