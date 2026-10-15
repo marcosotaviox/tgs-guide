@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "tgs": {
+    "id": "T&S 2801",
+    "designer": "T&S Traffic Management",
+    "client": "Delaney Civil",
+    "council": "Hilltops Council",
+    "design_date": "2025-10-07",
+    "scope": "Drainage upgrade",
+    "duration": "7 months",
+    "source_file": "samples/young-marina-st.png"
+  },
+  "location": {
+    "street": "Marina St",
+    "suburb": "Young",
+    "state": "NSW",
+    "postcode": "2594",
+    "cross_streets": ["Lynch St", "Main St"]
+  },
+  "speed_kmh": 50,
+  "d_m": null,
+  "anchors": [
+    {
+      "id": "int_marina_lynch",
+      "type": "intersection",
+      "streets": ["Marina St", "Lynch St"]
+    }
+  ],
+  "approaches": [
+    {
+      "id": "lynch_north",
+      "road": "Lynch St",
+      "traffic_from": "north",
+      "anchor": "int_marina_lynch",
+      "kerb": "left",
+      "signs": [
+        { "type": "ROADWORK_AHEAD",           "at_d": 4 },
+        { "type": "WORKER_SYMBOL",            "at_d": 3 },
+        { "type": "PREPARE_TO_STOP",          "at_d": 2 },
+        { "type": "TRAFFIC_CONTROLLER_AHEAD", "at_d": 1 }
+      ]
+    },
+    {
+      "id": "marina_east",
+      "road": "Marina St",
+      "traffic_from": "east",
+      "anchor": "int_marina_lynch",
+      "kerb": "left",
+      "signs": [
+        { "type": "ROADWORK_AHEAD",           "at_d": 4 },
+        { "type": "WORKER_SYMBOL",            "at_d": 3 },
+        { "type": "PREPARE_TO_STOP",          "at_d": 2 },
+        { "type": "TRAFFIC_CONTROLLER_AHEAD", "at_d": 1 }
+      ]
+    },
+    {
+      "id": "lynch_south",
+      "road": "Lynch St",
+      "traffic_from": "south",
+      "anchor": "int_marina_lynch",
+      "kerb": "left",
+      "signs": [
+        { "type": "ROADWORK_AHEAD",           "at_d": 4 },
+        { "type": "WORKER_SYMBOL",            "at_d": 3 },
+        { "type": "PREPARE_TO_STOP",          "at_d": 2 },
+        { "type": "TRAFFIC_CONTROLLER_AHEAD", "at_d": 1 }
+      ]
+    }
+  ],
+  "controllers": [
+    { "id": "TC1", "anchor": "int_marina_lynch", "position": "West side of Lynch St at Marina St", "equipment": "STOP_SLOW_BAT" },
+    { "id": "TC2", "anchor": "int_marina_lynch", "position": "East side of Lynch St at Marina St", "equipment": "STOP_SLOW_BAT", "note": "Manages truck loading/unloading, no queuing at intersection" }
+  ],
+  "manual_items": [
+    { "type": "DETOUR",              "placement": "manual", "description": "Lynch St north, near bottle shop" },
+    { "type": "ROAD_CLOSED_DETOUR",  "placement": "manual", "description": "Marina St at Lynch St corner, west side" },
+    { "type": "NO_EXIT",             "placement": "manual", "description": "Marina St, west of Lynch St" },
+    { "type": "FOOTPATH_CLOSED",     "placement": "manual", "description": "Both ends of footpath closure on Marina St", "qty": 2 },
+    { "type": "PEDESTRIANS_ARROW",   "placement": "manual", "description": "Main St footpath", "qty": 2 },
+    { "type": "TOILETS_ACCESSIBLE",  "placement": "manual", "description": "Marina St footpath near Main St" },
+    { "type": "BARRELS_ATF_FENCING", "placement": "manual", "description": "Along trench and truck loading zone, Marina St" }
+  ],
+  "notes": [
+    "Assistance required for entry and exit of semi trailer",
+    "Semi trailer to be guided out to Lynch St (opposite direction)",
+    "Vehicles to do a U-turn at roundabout"
+  ]
+}
